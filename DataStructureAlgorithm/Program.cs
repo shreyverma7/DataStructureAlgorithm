@@ -26,6 +26,21 @@ public class Program
                     replace.replaceString();
                     break;
                 case 4:
+                    int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
+                    InsertionSort insertionSort = new InsertionSort();
+                    insertionSort.InsertionSortAlgorithm(arr);
+                    Console.WriteLine("\nSorted array:");
+                    insertionSort.PrintArray(arr);
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+                case 9:
                     flag = false;
                     break;
             }
