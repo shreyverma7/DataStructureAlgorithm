@@ -9,7 +9,7 @@ public class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Enter a option \n1.BinarySearch \n2.Exit");
+            Console.WriteLine("Enter a option \n1.BinarySearch \n2.Check Anagram\n3.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -18,6 +18,10 @@ public class Program
                     search.ReadTextFileAndSearch(searchFilePath);
                     break;
                 case 2:
+                    CheckAnagram anagram = new CheckAnagram();
+                    anagram.checkAnagram();
+                    break;
+                case 3:
                     flag = false;
                     break;
             }
