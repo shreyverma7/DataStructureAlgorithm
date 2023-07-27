@@ -9,7 +9,7 @@ public class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Enter a option \n1.BinarySearch \n2.Check Anagram\n3.Replace String\n4.Exit");
+            Console.WriteLine("Enter a option \n1.BinarySearch \n2.Check Anagram\n3.Replace String\n4.Insertion Sort \n5.Bubble Sort \n9.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -33,6 +33,11 @@ public class Program
                     insertionSort.PrintArray(arr);
                     break;
                 case 5:
+                    int[] arr1 = { 64, 34, 25, 12, 22, 11, 90 };
+                    BubbleSort bubbleSort = new BubbleSort();
+                    bubbleSort.BubbleSortAlgorithm(arr1);
+                    Console.WriteLine("\nSorted array:");
+                    bubbleSort.PrintArray(arr1);
                     break;
                 case 6:
                     break;
