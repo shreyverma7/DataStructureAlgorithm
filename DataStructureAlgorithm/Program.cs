@@ -9,6 +9,7 @@ public class Program
         bool flag = true;
         while (flag)
         {
+            RangePrimeNumber rangePrimeNumber = new RangePrimeNumber();
             Console.WriteLine("Enter a option \n1.BinarySearch \n2.Check Anagram\n3.Replace String\n4.Insertion Sort \n5.Bubble Sort \n6.Range Prime Number \n9.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -42,7 +43,6 @@ public class Program
                 case 6:
                     Console.WriteLine("Enter the range :");
                     int range = Convert.ToInt32(Console.ReadLine());
-                    RangePrimeNumber rangePrimeNumber = new RangePrimeNumber();
                     for(int i =0; i < range; i++)
                     {
                        rangePrimeNumber.checkNumberIsPrime(i); 
@@ -50,8 +50,26 @@ public class Program
                     Console.WriteLine("\n");
                     break;
                 case 7:
+                    Console.WriteLine("Enter the range :");
+                    int range1 = Convert.ToInt32(Console.ReadLine());
+                    for (int i = 0; i < range1; i++)
+                    {
+                        rangePrimeNumber.checkNumberIsPrime(i);
+                    }
+                    Console.WriteLine("\n");
                     break;
                 case 8:
+                    PrimeAnagramPalidrome extend = new PrimeAnagramPalidrome();
+                    Console.WriteLine("Enter the range :");
+                    int range2 = Convert.ToInt32(Console.ReadLine());
+                    for (int i = 0; i < range2; i++)
+                    {
+                        if(extend.checkNumberIsPrime(i) && extend.IsPalindrome(i))
+                        {
+                            Console.Write(i+" ");
+                        }
+                    }
+                    Console.WriteLine("\n");
                     break;
                 case 9:
                     flag = false;
