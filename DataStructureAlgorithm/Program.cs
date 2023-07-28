@@ -1,10 +1,12 @@
 ﻿using DataStructureAlgorithm;
+using DataStructureAlgorithm.OrderedList;
 using DataStructureAlgorithm.UnOrderedList;
 
 public class Program
 {
     static string searchFilePath = @"D:\Bridgelabz Problem statement\DataStructureAlgorithm\DataStructureAlgorithm\Files\Search.txt";
     static string unOrderedFilePath = @"D:\Bridgelabz Problem statement\DataStructureAlgorithm\DataStructureAlgorithm\UnOrderedList\UnOrdered.txt";
+    static string OrderFilePath = @"D:\Bridgelabz Problem statement\DataStructureAlgorithm\DataStructureAlgorithm\OrderedList\Order.txt";
     public static void Main(string[] args)
     {
         Console.WriteLine("Data Structure\n");
@@ -12,7 +14,7 @@ public class Program
         while (flag)
         {
             RangePrimeNumber rangePrimeNumber = new RangePrimeNumber();
-            Console.WriteLine("\n\nEnter a option \n1.BinarySearch \n2.Check Anagram\n3.Replace String\n4.Insertion Sort \n5.Bubble Sort \n6.Range Prime Number \n7.Prime in Range \n8.Prime with palindrome\n9.UnOrdered Add or Delete\n10.Exit");
+            Console.WriteLine("\n\nEnter a option \n1.BinarySearch \n2.Check Anagram\n3.Replace String\n4.Insertion Sort \n5.Bubble Sort \n6.Range Prime Number \n7.Prime in Range \n8.Prime with palindrome\n9.UnOrdered Add or Delete\n10.Ordered Add or Delete\n10.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -69,6 +71,10 @@ public class Program
                     unorderListProblem.ReadFileAndPerformOperation(unOrderedFilePath);
                     break;
                 case 10:
+                    OrderedListOperation orderedListproblem = new OrderedListOperation();
+                    orderedListproblem.ReadFileAndPerformOperation(OrderFilePath);
+                    break;
+                case 11:
                     flag = false;
                     break;
             }
