@@ -1,8 +1,10 @@
 ﻿using DataStructureAlgorithm;
+using DataStructureAlgorithm.UnOrderedList;
 
 public class Program
 {
     static string searchFilePath = @"D:\Bridgelabz Problem statement\DataStructureAlgorithm\DataStructureAlgorithm\Files\Search.txt";
+    static string unOrderedFilePath = @"D:\Bridgelabz Problem statement\DataStructureAlgorithm\DataStructureAlgorithm\UnOrderedList\UnOrdered.txt";
     public static void Main(string[] args)
     {
         Console.WriteLine("Data Structure\n");
@@ -10,7 +12,7 @@ public class Program
         while (flag)
         {
             RangePrimeNumber rangePrimeNumber = new RangePrimeNumber();
-            Console.WriteLine("Enter a option \n1.BinarySearch \n2.Check Anagram\n3.Replace String\n4.Insertion Sort \n5.Bubble Sort \n6.Range Prime Number \n9.Exit");
+            Console.WriteLine("\n\nEnter a option \n1.BinarySearch \n2.Check Anagram\n3.Replace String\n4.Insertion Sort \n5.Bubble Sort \n6.Range Prime Number \n7.Prime in Range \n8.Prime with palindrome\n9.UnOrdered Add or Delete\n10.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -27,7 +29,7 @@ public class Program
                     replace.replaceString();
                     break;
                 case 4:
-                    int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
+                    int[] arr = { 33,22,11,6,40,55 };
                     InsertionSort insertionSort = new InsertionSort();
                     insertionSort.InsertionSortAlgorithm(arr);
                     Console.WriteLine("\nSorted array:");
@@ -72,6 +74,10 @@ public class Program
                     Console.WriteLine("\n");
                     break;
                 case 9:
+                    Opertion unorderListProblem = new Opertion();
+                    unorderListProblem.ReadFileAndPerformOperation(unOrderedFilePath);
+                    break;
+                case 10:
                     flag = false;
                     break;
             }
