@@ -14,7 +14,7 @@ public class Program
         while (flag)
         {
             RangePrimeNumber rangePrimeNumber = new RangePrimeNumber();
-            Console.WriteLine("\n\nEnter a option \n1.BinarySearch \n2.Check Anagram\n3.Replace String\n4.Insertion Sort \n5.Bubble Sort \n6.Range Prime Number \n7.Prime in Range \n8.Prime with palindrome\n9.UnOrdered Add or Delete\n10.Ordered Add or Delete\n10.Exit");
+            Console.WriteLine("\n\nEnter a option \n1.BinarySearch \n2.Check Anagram\n3.Replace String\n4.Insertion Sort \n5.Bubble Sort \n6.Range Prime Number \n7.Prime in Range \n8.Prime with palindrome\n9.UnOrdered Add or Delete\n10.Ordered Add or Delete\n10. Merge sort\n11.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -75,6 +75,14 @@ public class Program
                     orderedListproblem.ReadFileAndPerformOperation(OrderFilePath);
                     break;
                 case 11:
+                    MergeSort merge = new MergeSort();
+                    int[] arr11 = { 38, 27, 43, 3, 9, 82, 10 };
+                    merge.mergeSort(arr11);
+                    Console.WriteLine("\nSorted array:");
+                    merge.PrintArray(arr11);
+                    break;
+
+                case 12:
                     flag = false;
                     break;
             }
