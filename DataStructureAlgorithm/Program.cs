@@ -1,4 +1,5 @@
 ﻿using DataStructureAlgorithm;
+using DataStructureAlgorithm.BalancedParanthesis;
 using DataStructureAlgorithm.OrderedList;
 using DataStructureAlgorithm.UnOrderedList;
 
@@ -7,6 +8,7 @@ public class Program
     static string searchFilePath = @"D:\Bridgelabz Problem statement\DataStructureAlgorithm\DataStructureAlgorithm\Files\Search.txt";
     static string unOrderedFilePath = @"D:\Bridgelabz Problem statement\DataStructureAlgorithm\DataStructureAlgorithm\UnOrderedList\UnOrdered.txt";
     static string OrderFilePath = @"D:\Bridgelabz Problem statement\DataStructureAlgorithm\DataStructureAlgorithm\OrderedList\Order.txt";
+    static string BalanceFilePath = @"D:\Bridgelabz Problem statement\DataStructureAlgorithm\DataStructureAlgorithm\BalancedParanthesis\Balanced.txt";
     public static void Main(string[] args)
     {
         Console.WriteLine("Data Structure\n");
@@ -81,8 +83,12 @@ public class Program
                     Console.WriteLine("\nSorted array:");
                     merge.PrintArray(arr11);
                     break;
-
                 case 12:
+                    StackOperation balancedParanthesis = new StackOperation();  
+                    balancedParanthesis.ReadFileAndPerformOperation(BalanceFilePath);
+                    break;
+
+                case 13:
                     flag = false;
                     break;
             }
