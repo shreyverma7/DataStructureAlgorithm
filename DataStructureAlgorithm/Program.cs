@@ -1,6 +1,7 @@
 ﻿using DataStructureAlgorithm;
 using DataStructureAlgorithm.BalancedParanthesis;
 using DataStructureAlgorithm.OrderedList;
+using DataStructureAlgorithm.Simulate_Banking_Cash_Counter;
 using DataStructureAlgorithm.UnOrderedList;
 
 public class Program
@@ -16,7 +17,9 @@ public class Program
         while (flag)
         {
             RangePrimeNumber rangePrimeNumber = new RangePrimeNumber();
-            Console.WriteLine("\n\nEnter a option \n1.BinarySearch \n2.Check Anagram\n3.Replace String\n4.Insertion Sort \n5.Bubble Sort \n6.Range Prime Number \n7.Prime in Range \n8.Prime with palindrome\n9.UnOrdered Add or Delete\n10.Ordered Add or Delete\n10. Merge sort\n11.Exit");
+            Console.WriteLine("\n\nEnter a option \n1.BinarySearch \n2.Check Anagram\n3.Replace String\n4.Insertion Sort " +
+                "\n5.Bubble Sort \n6.Range Prime Number \n7.Prime in Range \n8.Prime with palindrome\n9.UnOrdered Add or Delete" +
+                "\n10.Ordered Add or Delete\n11.Merge sort\n12.Balanced parenthesis\n13.Simple Banking Cash Counter\n14.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -87,8 +90,13 @@ public class Program
                     StackOperation balancedParanthesis = new StackOperation();  
                     balancedParanthesis.ReadFileAndPerformOperation(BalanceFilePath);
                     break;
-
                 case 13:
+                    Bank bank = new Bank();
+                    bank.Balance(0);
+                    bank.AddPersonsInQueue();
+                    break;
+
+                case 14:
                     flag = false;
                     break;
             }
