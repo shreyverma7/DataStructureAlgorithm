@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace DataStructureAlgorithm.UnOrderedList
 {
-    public class LinkedList<T>
+    public  class LinkedList<T>
     {
         public Node<T> head;
         public void Add(T data)
