@@ -1,5 +1,6 @@
 ﻿using DataStructureAlgorithm;
 using DataStructureAlgorithm.BalancedParanthesis;
+using DataStructureAlgorithm.Hashing;
 using DataStructureAlgorithm.OrderedList;
 using DataStructureAlgorithm.Simulate_Banking_Cash_Counter;
 using DataStructureAlgorithm.UnOrderedList;
@@ -9,6 +10,7 @@ public class Program
     static string searchFilePath = @"D:\Bridgelabz Problem statement\DataStructureAlgorithm\DataStructureAlgorithm\Files\Search.txt";
     static string unOrderedFilePath = @"D:\Bridgelabz Problem statement\DataStructureAlgorithm\DataStructureAlgorithm\UnOrderedList\UnOrdered.txt";
     static string OrderFilePath = @"D:\Bridgelabz Problem statement\DataStructureAlgorithm\DataStructureAlgorithm\OrderedList\Order.txt";
+    static string HashingFilePath = @"D:\Bridgelabz Problem statement\DataStructureAlgorithm\DataStructureAlgorithm\Hashing\HashTable.txt";
     static string BalanceFilePath = @"D:\Bridgelabz Problem statement\DataStructureAlgorithm\DataStructureAlgorithm\BalancedParanthesis\Balanced.txt";
     public static void Main(string[] args)
     {
@@ -19,7 +21,7 @@ public class Program
             RangePrimeNumber rangePrimeNumber = new RangePrimeNumber();
             Console.WriteLine("\n\nEnter a option \n1.BinarySearch \n2.Check Anagram\n3.Replace String\n4.Insertion Sort " +
                 "\n5.Bubble Sort \n6.Range Prime Number \n7.Prime in Range \n8.Prime with palindrome\n9.UnOrdered Add or Delete" +
-                "\n10.Ordered Add or Delete\n11.Merge sort\n12.Balanced parenthesis\n13.Simple Banking Cash Counter\n14.Exit");
+                "\n10.Ordered Add or Delete\n11.Merge sort\n12.Balanced parenthesis\n13.Simple Banking Cash Counter\n14.Hashing\n15.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -95,8 +97,12 @@ public class Program
                     bank.Balance(0);
                     bank.AddPersonsInQueue();
                     break;
-
                 case 14:
+                    HashingOperation hashing = new HashingOperation();
+                    hashing.ReadFile(HashingFilePath);
+                    hashing.Display();
+                    break;
+                case 15:
                     flag = false;
                     break;
             }
